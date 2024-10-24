@@ -1,0 +1,38 @@
+.widgets {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  flex-grow: 1; /* Allow widgets to expand in the available space */
+}
+
+.widget {
+  flex: 1; /* Make widgets equal width */
+  min-width: 150px; /* Minimum width for each widget */
+  max-width: 300px; /* Optional: Limit max width */
+  background-color: #152b31ab;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s; /* Add a smooth transition effect */
+}
+
+.widget:hover {
+  transform: scale(1.05); /* Scale up widget on hover for effect */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .widgets {
+      flex-direction: column; /* Stack widgets vertically on mobile */
+      align-items: center; /* Center the widgets */
+      gap: 10px; /* Reduced gap for mobile */
+  }
+
+  .widget {
+      width: 100%; /* Full width for mobile widgets */
+      max-width: none; /* Remove max-width to allow full width */
+  }
+}

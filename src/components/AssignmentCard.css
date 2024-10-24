@@ -1,0 +1,79 @@
+/* Grid container for the assignment cards */
+.assignment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+    grid-template-rows: auto; /* Rows adjust based on content */
+    gap: 10px; /* Reduced space between cards */
+    padding: 20px; /* Padding around the grid */
+    background-color: #f5f5f5; /* Background color for the grid */
+    min-height: 100vh; /* Minimum height to fill the viewport */
+    align-items: start; /* Align items to the start */
+    justify-items: center; /* Center items horizontally */
+}
+
+/* Individual card styles */
+.assignment-card {
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Inner padding reduced for compactness */
+    background-color: #fff; /* Background color for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%; /* Full width for responsiveness */
+    max-width: 300px; /* Maximum width of the cards */
+    font-family: 'Arial', sans-serif; /* Font family */
+    text-align: center; /* Center text */
+}
+
+/* Card title styles */
+.assignment-card h3 {
+    font-size: 1.4rem; /* Title font size */
+    margin-bottom: 8px; /* Space below title */
+    color: #333; /* Title color */
+}
+
+/* Card paragraph styles */
+.assignment-card p {
+    font-size: 1rem; /* Paragraph font size */
+    color: #555; /* Paragraph color */
+}
+
+/* List styles in cards */
+.assignment-card ul {
+    list-style-type: disc; /* Bullet points */
+    padding-left: 20px; /* Indent list */
+}
+
+/* Submission link styles */
+.submission-link a {
+    display: inline-block; /* Block display for button */
+    margin-top: 10px; /* Space above button */
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Text color */
+    padding: 10px 15px; /* Padding for button */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Button hover effect */
+.submission-link a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .assignment-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    .assignment-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        padding: 10px; /* Reduced padding for mobile */
+    }
+
+    .assignment-card {
+        max-width: 100%; /* Ensure cards take full width on mobile */
+    }
+}

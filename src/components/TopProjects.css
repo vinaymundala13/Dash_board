@@ -1,0 +1,72 @@
+/* TopProjects.css */
+
+.top-projects {
+    background-color: rgb(197, 196, 157);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333; /* Set a default text color */
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2.5rem; /* Increase font size for the main heading */
+    margin: 20px 0; /* Space above and below the heading */
+    text-align: center; /* Center align the heading */
+    color: #2c3e50; /* Darker color for better visibility */
+    font-weight: bold; /* Make the heading bold */
+}
+
+.top-projects h3 {
+    font-size: 1.8rem; /* Increase font size */
+    margin-bottom: 15px; /* Space below the heading */
+    text-align: center; /* Center align the heading */
+    color: #2c3e50; /* Darker color for better visibility */
+    font-weight: bold; /* Make the heading bold */
+}
+
+/* Base table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table; /* Ensures table renders as a block element */
+    overflow: hidden; /* Hide overflow on small screens */
+}
+
+/* Table header and cell styles */
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid hsl(0, 0%, 87%);
+    text-align: center; /* Horizontally center content */
+    vertical-align: middle; /* Vertically center content */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* For tablet and smaller screens */
+    th, td {
+        padding: 8px; /* Reduced padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For mobile screens */
+    table {
+        display: block; /* Keep table as block to allow scrolling */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+
+    th,
+    td {
+        display: table-cell; /* Keep table cells as cells */
+        padding: 10px; /* Maintain padding */
+    }
+
+    /* Ensure th is clearly visible */
+    th {
+        background-color: rgba(255, 255, 255, 0.8); /* Light background for headers */
+        font-weight: bold; /* Bold font for headers */
+    }
+}

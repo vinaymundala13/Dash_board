@@ -1,0 +1,7 @@
+[
+    { "id": 1, "project": "Finance", "lead": "Alice", "company": "ByteRise Inc.", "value": "$223,000" },
+    { "id": 2, "project": "Ecommerce", "lead": "Bob", "company": "AndrewCo Group", "value": "$95,000" },
+    { "id": 3, "project": "Health", "lead": "Sarah", "company": "LunaTech Ltd.", "value": "$150,000" },
+    { "id": 4, "project": "Education", "lead": "Eddie", "company": "TrioSky Inc.", "value": "$100,000" }
+  ]
+  

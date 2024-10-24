@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+import Analytics from './components/Analytics';
+import TopProjects from './components/TopProjects';
+import DashboardWidget from './components/DashboardWidget';
+import LeadManagement from './components/LeadManagement';
+import './App.css'
+import AssignmentCard from './components/AssignmentCard';
+import AssignmentComponent from './components/AssignmentComponent';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Sidebar />
+        <div className="main-content">
+          <div className="widgets-container">
+            <div className="widgets">
+              <DashboardWidget title="Completed" value="25+" />
+              <DashboardWidget title="Reviews" value="100+" />
+              <DashboardWidget title="Working" value="25+" />
+            </div>
+            <AssignmentComponent />
+          </div>
+          <Routes>
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/leads" element={<TopProjects />} />
+            <Route path="/lead-management" element={<LeadManagement />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

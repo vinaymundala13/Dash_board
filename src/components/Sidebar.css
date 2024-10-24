@@ -1,0 +1,87 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #1e1e2f;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%); /* Initially hidden */
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    transform: translateX(0); /* Slide in when active */
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.link {
+    color: #c0c0c0;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.link:hover,
+.link.active {
+    color: white;
+}
+
+/* Toggle Button for Mobile */
+.toggle-button {
+    display: none; /* Hidden on desktop */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #1e1e2f;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* Overlay to close the sidebar */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block; /* Show button on mobile */
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .toggle-button {
+        display: none; /* Hide button on desktop */
+    }
+
+    .sidebar {
+        transform: translateX(0); /* Always visible on desktop */
+    }
+}
